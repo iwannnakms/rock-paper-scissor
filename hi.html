@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Honk&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="flex-container">
+        <header>
+            <h1 class="honk head">ROCK PAPER SCISSOR</h1>
+        </header>
+        <main>
+            <div class="current_state ">
+                <div class="player">
+                    <div>PLAYER</div>
+                    <div id="player-choice">?</div>
+                </div>
+                <div class="computer ">
+                    <div>ROBOT</div>
+                    <div id="computer-choice">?</div>
+                </div>
+            </div>
+            <div class="choice">
+                <button class="c" id = "rock">✊</button>
+                <button class="c" id = "paper">✋</button>
+                <button class="c" id = "scissor">✌️</button>
+            </div>
+            <div class="score ">
+                <span class="player-score">Player: <span id = "player-score">0</span></span>
+                <span class="computer-score">Computer: <span id = "computer-score">0</span>
+            </div>
+        </main>
+        <footer>
+            <div>
+            <button class="reset " id = "restart">restart</button>
+            </div>
+        </footer>
+    </div>
+    <div id="state">
+        <div id="back-drop"></div>
+        <div id="game-over">
+            <div class="text " id="winner">Winner : <span id="official_winner">placeholder</span></div>
+            <div class="text " id="message">placeholder</div>
+            <div class="button-box">
+                <button id="play_again" class="">Play again</button>
+                <button id="exit" class="">exit</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
