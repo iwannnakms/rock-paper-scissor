@@ -93,7 +93,7 @@ function display_winner(winner){
         winnertext.textContent="You Win !!!";
     }
     else{
-        winnername.textContent="Robot";
+        winnername.textContent="Computer";
         winnername.classList.remove("winner_is_player");
         winnername.classList.add("winner_is_robot");
         winnertext.textContent="Better luck next time";
