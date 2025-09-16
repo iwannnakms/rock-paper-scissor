@@ -11,6 +11,11 @@ html{
     font-size: 40%; 
   }
 }
+@media screen and (max-height: 700px) {
+  html {
+    font-size: 35%; 
+  }
+}
 body{
     background-color: black;
     box-sizing: border-box;
@@ -26,8 +31,6 @@ body{
     height: 100vh;
     align-items: center;
     flex-direction: column;
-
-    
 }
 img{
     width: 10rem;
