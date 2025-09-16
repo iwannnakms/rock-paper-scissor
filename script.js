@@ -1,7 +1,7 @@
 
 let currentPlayerScore = 0;
 let currentComputerScore = 0;
-
+let isProcessing = false;
 const winCondition = 2;
 
 const playerChoice = document.querySelector("#player-choice");
@@ -26,11 +26,9 @@ playAgainButton.addEventListener('click',()=>{reset()});
 exit.addEventListener('click',()=>{hide()});
 hide();
 function play_round(choice){
-    if(winCondition < Math.max(currentPlayerScore,currentComputerScore)){
-        let winner = (currentPlayerScore > currentComputerScore) ? 0 : 1;
-        display_winner(winner);
-        return;
-    }
+    if (isProcessing) {
+    return; 
+  }
     let currentPlayerChoice = choice;
     let currentComputerChoice = get_computer_choice();
     set_choice(playerChoice,currentPlayerChoice);
@@ -50,7 +48,11 @@ function play_round(choice){
     }
     if(winCondition < Math.max(currentPlayerScore,currentComputerScore)){
         let win = (currentPlayerScore > currentComputerScore) ? 0 : 1;
-        setTimeout(()=>{display_winner(win)},500)
+        isProcessing = true;
+        setTimeout(()=>{
+            isProcessing = false;
+            display_winner(win)},1000)
+        return;
     }
 }
 function get_computer_choice(){
@@ -69,16 +71,20 @@ function check_round_winner(player, computer){
 function set_choice(html,choice){
     switch(choice){
         case(0):
-            html.textContent = "✊";
+            html.innerHTML = "<img src=\"scissors.png\">";
             break;
         case(1):
-            html.textContent = "✋";
+            html.innerHTML = "<img src=\"rock.png\">";
             break;
         case(2):
-            html.textContent = "✌️";
+            html.innerHTML = "<img src=\"paper.png\">";
             break;
-        default:
-            html.textContent = "?"
+        case(3):
+            html.innerHTML = "<img src=\"giphy2.gif\">";
+            break;
+        case(4):
+            html.innerHTML = "<img src=\"giphy.gif\">";
+            break;
     }
 }
 function updateHTML(html,score){
@@ -106,8 +112,8 @@ function reset(){
     currentComputerScore = 0;
     updateHTML(playerScore,currentPlayerScore);
     updateHTML(computerScore,currentComputerScore);
-    set_choice(playerChoice,-1);
-    set_choice(computerChoice,-1);
+    set_choice(playerChoice,3);
+    set_choice(computerChoice,4);
 }
 function hide(){
     game_end.classList.add("toggle");
