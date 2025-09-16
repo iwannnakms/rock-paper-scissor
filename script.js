@@ -69,13 +69,13 @@ function check_round_winner(player, computer){
 function set_choice(html,choice){
     switch(choice){
         case(0):
-            html.innerHTML = "<img src=\"scissors.png\">";
+            html.innerHTML = "<img src=\"rock.png\">";
             break;
         case(1):
             html.innerHTML = "<img src=\"paper.png\">";
             break;
         case(2):
-            html.innerHTML = "<img src=\"rock.png\">";
+            html.innerHTML = "<img src=\"scissors.png\">";
             break;
         case(3):
             html.innerHTML = "<img src=\"giphy2.gif\">";
