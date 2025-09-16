@@ -16,7 +16,6 @@ const game_end = document.querySelector("#state");
 const winnername =document.querySelector("#official_winner");
 const winnertext =document.querySelector("#message");
 const playAgainButton = document.querySelector("#play_again");
-const exitButton = document.querySelector("#exit");
 
 rock.addEventListener('click',()=>{play_round(0)});
 paper.addEventListener('click',()=>{play_round(1)});

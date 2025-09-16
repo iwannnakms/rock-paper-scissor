@@ -1,21 +1,7 @@
 html{
     font-size: 62.5%;
 }
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 50%; 
-  }
-}
-@media screen and (max-width: 400px) {
-  html {
-    font-size: 40%; 
-  }
-}
-@media screen and (max-height: 700px) {
-  html {
-    font-size: 35%; 
-  }
-}
+
 body{
     background-color: black;
     box-sizing: border-box;
@@ -99,8 +85,9 @@ button:active{
     justify-content: space-evenly;
 }
 .c{
- background-color: black;
+    background-color: black;
     border: black;
+    display: flex;
 }
 footer{
     flex-grow: 1;
@@ -179,4 +166,46 @@ button:active{
     display: flex;
     justify-content: center;
     gap: 4rem;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 45%; 
+  }
+    img{
+    width: 6rem;
+  }
+  .c{
+    width: 6rem;
+  }
+  .choice{
+    max-height: 8rem;
+  }
+    #player-choice,#computer-choice{
+    width: 10rem;
+    height: 10rem;
+  }
+    button.reset{
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 37%; 
+  }
+  img{
+    width: 6rem;
+  }
+  .c{
+    width: 6rem;
+  }
+  .choice{
+    max-height: 8rem;
+  }
+  #player-choice,#computer-choice{
+    width: 10rem;
+    height: 10rem;
+  }
+  button.reset{
+    font-size: 3.5rem;
+  }
 }
