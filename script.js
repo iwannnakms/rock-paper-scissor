@@ -22,7 +22,6 @@ paper.addEventListener('click',()=>{play_round(1)});
 scissor.addEventListener('click',()=>{play_round(2)});
 resetButton.addEventListener('click',()=>{reset()});
 playAgainButton.addEventListener('click',()=>{reset()});
-exit.addEventListener('click',()=>{hide()});
 
 function play_round(choice){
     if (isProcessing) {
